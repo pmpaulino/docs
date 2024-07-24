@@ -9,9 +9,6 @@ __pycache__/
 venv/
 .env/
 
-# MkDocs configuration
-mkdocs.yml
-
 # OS-specific files
 .DS_Store
 Thumbs.db
