@@ -1,0 +1,18 @@
+[project]
+name = "docs"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Patrick Paulino", email = "pmpaulino@gmail.com" }
+]
+dependencies = [
+    "mkdocs>=1.6.0",
+    "mkdocs-multirepo-plugin>=0.8.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
