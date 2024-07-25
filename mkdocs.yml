@@ -1,7 +1,10 @@
 site_name: pmpaulino-docs
+repo_url: https://github.com/pmpaulino/docs
+
+nav:
+  - Home: index.md
+  - Timestamp: '!import https://github.com/pmpaulino/timestamp?branch=main'
+
 plugins:
   - search
-  - multirepo:
-      repos: 
-        - section: timestamp
-          import_url: 'https://github.com/pmpaulino/timestamp?branch=main'
+  - multirepo
