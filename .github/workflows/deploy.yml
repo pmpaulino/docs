@@ -3,6 +3,16 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      confluence_force_update:
+        description: 'Force update all pages (yes/no)?'
+        required: false
+        default: 'no'
+      confluence_cleanup:
+        description: 'Delete all pages (yes/no)?'
+        required: false
+        default: 'no'
 jobs:
   build:
     name: Deploy docs to GitHub Pages
@@ -33,5 +43,9 @@ jobs:
         with:
           confluence_tenant: ${{ secrets.CONFLUENCE_TENANT }}
           confluence_space: 'docs'
+          confluence_parent_page: 'docs Home'
           confluence_user: ${{ secrets.CONFLUENCE_USER }}
           confluence_token: ${{ secrets.CONFLUENCE_TOKEN }}
+          confluence_force_update: ${{ github.event.inputs.confluence_force_update }}
+          confluence_cleanup: ${{ github.event.inputs.confluence_cleanup }}
+

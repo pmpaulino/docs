@@ -4,6 +4,7 @@ repo_url: https://github.com/pmpaulino/docs
 plugins:
   - search
   - multirepo:
+      cleanup: false
       nav_repos:
         - name: timestamp
           import_url: 'https://github.com/pmpaulino/timestamp?branch=main'
