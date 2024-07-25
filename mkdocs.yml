@@ -5,10 +5,11 @@ plugins:
   - search
   - multirepo:
       cleanup: false
+      keep_docs_dir: true
       nav_repos:
         - name: timestamp
           import_url: 'https://github.com/pmpaulino/timestamp?branch=main'
-          imports: [docs/index.md]
+          imports: [docs/**]
 nav:
   - Home: index.md
-  - Timestamp: timestamp/docs/index.md
+  - Timestamp: timestamp/docs/
